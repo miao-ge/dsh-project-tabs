@@ -1,0 +1,8 @@
+# 把 dsh-project-tabs 插进 profile 的插件清单（作为 profile bundle patch 层生效）。
+# 安装方式见 README.md / scripts/install.ps1。
+#
+# 这个插件只有客户端半边：宿主这行存在的意义是让 dsh-client-modules 在 Loader 条目里
+# 扫描到本包的 `dsh.client` 声明，从而把 lib/client.js 作为 /plugins 下的 bundle 提供给浏览器。
+- insert:
+    - id: project-tabs
+      name: 'dsh-project-tabs'
